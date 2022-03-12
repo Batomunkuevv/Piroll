@@ -25,10 +25,10 @@
 	border: 2px solid #fff;
 }
 
-.fullscreen {
-	min-height: 100vh;
-	background: url("../img/Header/gora-6.jpg") center/cover no-repeat;
-	padding: 38px 98px 0px;
+.header {
+	position: absolute;
+	width: 100%;
+	z-index: 50;
 	&__body {
 	}
 
