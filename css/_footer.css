@@ -1,0 +1,45 @@
+.footer {
+  padding: 100px 0 80px;
+  background: #141414; }
+  .footer__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .footer__company {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.18px;
+    margin: 0px 0px 27px 0px; }
+  .footer__credits {
+    color: #bcbcbc;
+    font-family: "Nunito Sans";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.07px; }
+  .footer__link {
+    color: #bcbcbc;
+    font-size: 18px;
+    letter-spacing: 0.07px;
+    margin: 0 0 20px 0; }
+
+.itemfooter {
+  font-family: "Nunito Sans";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  color: #bcbcbc;
+  font-size: 18px;
+  letter-spacing: 0.07px; }
+  .itemfooter__email {
+    margin: 0px 0px 10px 0px; }

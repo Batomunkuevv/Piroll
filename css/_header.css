@@ -1,0 +1,78 @@
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -10px; }
+  .menu__item {
+    padding: 0 10px;
+    color: #140e0e;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s; }
+    .menu__item:hover {
+      color: #fff; }
+
+.btn {
+  line-height: 50px;
+  width: 180px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 13px;
+  border: 2px solid #fff; }
+
+.fullscreen {
+  min-height: 100vh;
+  background: url("../img/Header/gora-6.jpg") center/cover no-repeat;
+  padding: 38px 98px 0px; }
+  .fullscreen__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0px 0px 180px 0px; }
+  .fullscreen__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 0 0 auto;
+    width: 50%;
+    color: #fff; }
+  .fullscreen__title {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0.38px;
+    margin: 0px 0px 32px 0px; }
+  .fullscreen__subtitle {
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.09px;
+    margin: 0px 0px 90px 0px; }
+  .fullscreen__btn {
+    -webkit-box-shadow: 2px 2px 7px 3px #fff;
+    box-shadow: 2px 2px 7px 3px #fff; }
+    .fullscreen__btn:hover {
+      -webkit-box-shadow: 2px 2px 10px 4px #fff;
+      box-shadow: 2px 2px 10px 4px #fff;
+      -webkit-transition: all 0.5s ease 0.1s;
+      -o-transition: all 0.5s ease 0.1s;
+      transition: all 0.5s ease 0.1s; }
+    .fullscreen__btn:active {
+      -webkit-box-shadow: 2px 1px 2px 2px #fff;
+      box-shadow: 2px 1px 2px 2px #fff;
+      -webkit-transition: all 0.5s ease 0.1s;
+      -o-transition: all 0.5s ease 0.1s;
+      transition: all 0.5s ease 0.1s; }

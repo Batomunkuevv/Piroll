@@ -1,18 +1,67 @@
-@import "_nullstyle";
-//
+//<Mixins>=================================================================================================
 
-//              Шрифты
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+	@if $type==1 {
+		//Только если меньше контейнера
+		#{$property}: $startSize + px;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type==2 {
+		//Только если больше контейнера
+		#{$property}: $startSize + px;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//Всегда
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+//</Mixins>================================================================================================
+
+//<Fonts>==================================================================================================
+
+//<Connect fonts>==========================================================================================
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Nunito+Sans&family=Work+Sans&display=swap");
 
-//
+
+//</Connect fonts>==========================================================================================
+
+//<Standard font>===========================================================================================
+
+$fontfamaly: "Montserrat";
+
+//</Standard font>==========================================================================================
+
+//</Fonts>==================================================================================================
+
+//<Variables>===========================================================================================
+
+$maxWidthContainer: 1171px;
+$maxWidth: 200px;
+
+//</Variables>==========================================================================================
+
+//<Zeroing and Common parameters>===========================================================================
+
+@import "_nullstyle";
 
 html,
 body {
-	height: 100%;
-	font-family: Montserrat;
+	font-family: $fontfamaly;
 }
-//              Header
+
+.content {
+	flex: 1 1 auto;
+}
+
+//</Zeroing and Common Parameters>===========================================================================
+
+//<Wrapper>==================================================================================================
 
 .wrapper {
 	min-height: 100vh;
@@ -20,102 +69,30 @@ body {
 	flex-direction: column;
 }
 
-.content {
-	flex: 1 1 auto;
-}
+//</Wrapper>=================================================================================================
+
+//<Main grid>================================================================================================
 
 .container {
-	max-width: 1171px;
+	max-width: $maxWidthContainer;
 	margin: 0 auto;
 }
 
-.menu {
-	display: flex;
-	margin: 0 -10px;
-	&__item {
-		padding: 0 10px;
-		color: #140e0e;
-		font-size: 20px;
-		font-weight: 600;
-		line-height: 24px;
-		transition: all 0.5s ease 0s;
-		&:hover {
-			color: #fff;
-		}
-	}
-}
+//</Main grid>===============================================================================================
 
-.btn {
-	line-height: 50px;
-	width: 180px;
-	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 1.2px;
-	font-size: 13px;
-	border: 2px solid #fff;
-}
+//<Connecting page styles and elements>=====================================================================
 
-.fullscreen {
-	min-height: 100vh;
-	background: url("../img/Header/gora-6.jpg") center/cover no-repeat;
-	padding: 38px 98px 0px;
-	&__body {
-	}
+@import "_ibg";
+@import "_header";
+@import "_footer";
 
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		margin: 0px 0px 180px 0px;
-	}
+//</Connecting page styles and elements>=====================================================================
 
-	&__logo {
-	}
+//===========================================================================================================
 
-	&__menu {
-	}
+//</Main block>==============================================================================================
 
-	&__text {
-		display: flex;
-		flex-direction: column;
-		margin: 0 0 0 auto;
-		width: 50%;
-		color: #fff;
-	}
-
-	&__title {
-		font-size: 38px;
-		font-weight: 600;
-		line-height: 48px;
-		letter-spacing: 0.38px;
-		margin: 0px 0px 32px 0px;
-	}
-
-	&__subtitle {
-		font-family: "Nunito Sans";
-		font-size: 18px;
-		font-weight: 600;
-		line-height: 28px;
-		letter-spacing: 0.09px;
-		margin: 0px 0px 90px 0px;
-	}
-
-	&__btn {
-		box-shadow: 2px 2px 7px 3px #fff;
-		&:hover {
-			box-shadow: 2px 2px 10px 4px #fff;
-			transition: all 0.5s ease 0.1s;
-		}
-		&:active {
-			box-shadow: 2px 1px 2px 2px #fff;
-			transition: all 0.5s ease 0.1s;
-		}
-	}
-}
-
-//                              //
-
-//                     About
+//<About>====================================================================================================
 
 .about {
 	padding: 100px 0;
@@ -152,9 +129,9 @@ body {
 	text-align: center;
 }
 
-//                        //
+//</About>====================================================================================================
 
-//                  Skills
+//<@debug>=====================================================================================================
 
 .skills {
 	background: #f8f9f9;
@@ -217,9 +194,9 @@ body {
 	}
 }
 
-//                       //
+//</Skills>=====================================================================================================
 
-//                  Numbers
+//<Numbers>=====================================================================================================
 
 .numbers {
 	background: #10c9c3;
@@ -266,9 +243,9 @@ body {
 	}
 }
 
-//                       //
+//</Numbers>=====================================================================================================
 
-//                   Work
+//<Work>=========================================================================================================
 
 .work {
 	background: #f5f5f5;
@@ -315,9 +292,9 @@ body {
 	}
 }
 
-//                      //
+//</Work>=========================================================================================================
 
-//                Workprocess
+//<Workprocess>===================================================================================================
 
 .workprocess {
 	padding: 100px 0;
@@ -338,9 +315,10 @@ body {
 		height: 40em;
 	}
 }
-//                      //
 
-//                 Services
+//</Workprocess>===================================================================================================
+
+//<Services>=======================================================================================================
 
 .services {
 	padding: 100px 0 38px;
@@ -384,9 +362,9 @@ body {
 	}
 }
 
-//                      //
+//</Services>=======================================================================================================
 
-//                  Testimonials
+//<Testimonials>=======================================================================================================
 
 .testimonials {
 	background: #10c9c3;
@@ -434,9 +412,10 @@ body {
 		padding: 0 3px;
 	}
 }
-//                       //
 
-//                  Clients
+//</Testimonialss>=======================================================================================================
+
+//<Clientss>=============================================================================================================
 
 .clients {
 	padding: 64px 0;
@@ -448,9 +427,10 @@ body {
 	&__image {
 	}
 }
-//                       //
 
-//                 Need project
+//</Clientss>=============================================================================================================
+
+//<Needproject>=============================================================================================================
 
 .needproject {
 	background: #f5f5f5;
@@ -516,56 +496,8 @@ body {
 	flex: 1 1 auto;
 	padding: 0 15px;
 }
+//<Clientss>=============================================================================================================
 
-//                       //
+//</Main block>==============================================================================================
 
-//                  Footer
-
-.footer {
-	padding: 100px 0 80px;
-	background: #141414;
-	&__row {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	&__company {
-		color: #ffffff;
-		font-size: 18px;
-		font-weight: 500;
-		letter-spacing: 0.18px;
-		margin: 0px 0px 27px 0px;
-	}
-
-	&__credits {
-		color: #bcbcbc;
-		font-family: "Nunito Sans";
-		font-size: 15px;
-		font-weight: 400;
-		line-height: 24px;
-		letter-spacing: 0.07px;
-	}
-	&__link {
-		color: #bcbcbc;
-		font-size: 18px;
-		letter-spacing: 0.07px;
-		margin: 0 0 20px 0;
-	}
-}
-
-.itemfooter {
-	font-family: "Nunito Sans";
-	display: flex;
-	flex-direction: column;
-	display: flex;
-	flex-direction: column;
-	color: #bcbcbc;
-	font-size: 18px;
-	letter-spacing: 0.07px;
-	&__email {
-		margin: 0px 0px 10px 0px;
-	}
-	&__phone {
-	}
-}
-//                             /
+//============================================================================================================
