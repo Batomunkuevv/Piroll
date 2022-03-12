@@ -110,33 +110,6 @@ body {
       color: #fff;
       font-size: 18px; }
 
-.btn {
-  line-height: 50px;
-  width: 180px;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-size: 13px;
-  border: 2px solid #fff;
-  -webkit-box-shadow: 0px 0px 5px 0px #fff;
-  box-shadow: 0px 0px 5px 0px #fff;
-  -webkit-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s; }
-  .btn:hover {
-    -webkit-box-shadow: 1px 1px 10px 4px #fff;
-    box-shadow: 1px 1px 10px 4px #fff;
-    -webkit-transition: all 0.5s ease 0.1s;
-    -o-transition: all 0.5s ease 0.1s;
-    transition: all 0.5s ease 0.1s; }
-  .btn:active {
-    -webkit-box-shadow: 1px 1px 5px 0px #fff;
-    box-shadow: 1px 1px 5px 0px #fff;
-    -webkit-transition: all 0.5s ease 0.1s;
-    -o-transition: all 0.5s ease 0.1s;
-    transition: all 0.5s ease 0.1s; }
-
 .header {
   position: absolute;
   width: 100%;
@@ -252,6 +225,33 @@ body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto; }
 
+.btn {
+  line-height: 50px;
+  width: 180px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 13px;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0px 0px 5px 0px #fff;
+  box-shadow: 0px 0px 5px 0px #fff;
+  -webkit-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease 0.1s; }
+  .btn:hover {
+    -webkit-box-shadow: 1px 1px 10px 4px #fff;
+    box-shadow: 1px 1px 10px 4px #fff;
+    -webkit-transition: all 0.5s ease 0.1s;
+    -o-transition: all 0.5s ease 0.1s;
+    transition: all 0.5s ease 0.1s; }
+  .btn:active {
+    -webkit-box-shadow: 1px 1px 5px 0px #fff;
+    box-shadow: 1px 1px 5px 0px #fff;
+    -webkit-transition: all 0.5s ease 0.1s;
+    -o-transition: all 0.5s ease 0.1s;
+    transition: all 0.5s ease 0.1s; }
+
 .about {
   padding: 100px 0; }
   .about__title {
@@ -328,21 +328,21 @@ body {
 
 .item__ui {
   width: 75%;
-  background: #10c9c3;
+  background: #43342f;
   height: 100%; }
 
 .item__web {
   width: 90%;
-  background: #10c9c3;
+  background: #43342f;
   height: 100%; }
 
 .item__marketing {
   width: 65%;
-  background: #10c9c3;
+  background: #43342f;
   height: 100%; }
 
 .numbers {
-  background: #10c9c3;
+  background: #43342f;
   padding: 100px 0; }
   .numbers__row {
     display: -webkit-box;
@@ -394,37 +394,69 @@ body {
     letter-spacing: 1.2px; }
 
 .work {
-  background: #f5f5f5;
-  padding: 0px 0px 48px 0px;
-  min-height: 100vh; }
+  background: #43342f;
+  padding: 0px 0px 30px 0px; }
   .work__row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    min-height: 85vh;
-    margin: 0px 0px 46px 0px; }
-  .work__item {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 25%;
-    flex: 1 1 25%; }
-    .work__item_gray {
-      background: #ddd; }
-    .work__item_white {
-      background: #838383; }
-    .work__item_black {
-      background: #252525;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-  .work__body {
+    width: 100%; }
+    @media (max-width: 1100px) {
+      .work__row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+  .work__column {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 25%;
+    flex: 0 1 25%; }
+    @media (max-width: 1100) {
+      .work__column {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%; } }
+  .work__btn {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    margin: 30px auto 0;
+    font-size: 12px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s; }
+    .work__btn:hover {
+      line-height: 50px;
+      -webkit-box-shadow: 1px 1px 5px 3px #fff;
+      box-shadow: 1px 1px 5px 3px #fff;
+      -webkit-transition: all 0.5s ease 0s;
+      -o-transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s; }
+    .work__btn:active {
+      -webkit-box-shadow: 1px 1px 0px 0px #fff;
+      box-shadow: 1px 1px 0px 0px #fff;
+      -webkit-transition: all 0.5s ease 0s;
+      -o-transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s; }
+
+.item {
+  position: relative;
+  height: 300px;
+  display: block; }
+  .item__eyes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -433,24 +465,23 @@ body {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
-  .work__btn {
-    color: #8e8e8e;
-    border: 2px solid #838383;
-    -webkit-box-shadow: 2px 2px 7px 3px #252525;
-    box-shadow: 2px 2px 7px 3px #252525; }
-    .work__btn:hover {
-      -webkit-box-shadow: 2px 2px 10px 4px #252525;
-      box-shadow: 2px 2px 10px 4px #252525;
-      -webkit-transition: all 0.5s ease 0.1s;
-      -o-transition: all 0.5s ease 0.1s;
-      transition: all 0.5s ease 0.1s; }
-    .work__btn:active {
-      -webkit-box-shadow: 2px 1px 2px 2px #252525;
-      box-shadow: 2px 1px 2px 2px #252525;
-      -webkit-transition: all 0.5s ease 0.1s;
-      -o-transition: all 0.5s ease 0.1s;
-      transition: all 0.5s ease 0.1s; }
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transition: all 0.5s ease-in 0s;
+    -o-transition: all 0.5s ease-in 0s;
+    transition: all 0.5s ease-in 0s;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden; }
+  .item__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .item:hover .item__eyes {
+    opacity: 1;
+    visibility: visible; }
 
 .workprocess {
   padding: 100px 0; }
