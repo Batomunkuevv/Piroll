@@ -62,7 +62,8 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 html,
 body {
-  font-family: "Montserrat"; }
+  font-family: "Montserrat";
+  color: #fff; }
 
 .wrapper {
   min-height: 100vh;
@@ -150,7 +151,7 @@ body {
 
 .footer {
   padding: 100px 0 80px;
-  background: #141414; }
+  background: #43342f; }
   .footer__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -159,23 +160,25 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between; }
   .footer__company {
-    color: #ffffff;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.18px;
     margin: 0px 0px 27px 0px; }
   .footer__credits {
-    color: #bcbcbc;
     font-family: "Nunito Sans";
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.07px; }
   .footer__link {
-    color: #bcbcbc;
+    display: block;
+    color: #fff;
     font-size: 18px;
     letter-spacing: 0.07px;
-    margin: 0 0 20px 0; }
+    margin: 0px 0px 5px 0px;
+    padding: 5px; }
+    .footer__link:hover {
+      text-decoration: underline; }
 
 .itemfooter {
   font-family: "Nunito Sans";
@@ -188,7 +191,6 @@ body {
   flex-direction: column;
   display: flex;
   flex-direction: column;
-  color: #bcbcbc;
   font-size: 18px;
   letter-spacing: 0.07px; }
   .itemfooter__email {
@@ -229,6 +231,7 @@ body {
   line-height: 50px;
   width: 180px;
   text-align: center;
+  border-radius: 15px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -236,21 +239,19 @@ body {
   border: 2px solid #fff;
   -webkit-box-shadow: 0px 0px 5px 0px #fff;
   box-shadow: 0px 0px 5px 0px #fff;
-  -webkit-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s; }
+  -webkit-transition: all 0.5s ease-in 0s;
+  -o-transition: all 0.5s ease-in 0s;
+  transition: all 0.5s ease-in 0s; }
   .btn:hover {
     -webkit-box-shadow: 1px 1px 10px 4px #fff;
     box-shadow: 1px 1px 10px 4px #fff;
-    -webkit-transition: all 0.5s ease 0.1s;
-    -o-transition: all 0.5s ease 0.1s;
-    transition: all 0.5s ease 0.1s; }
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s; }
   .btn:active {
-    -webkit-box-shadow: 1px 1px 5px 0px #fff;
-    box-shadow: 1px 1px 5px 0px #fff;
-    -webkit-transition: all 0.5s ease 0.1s;
-    -o-transition: all 0.5s ease 0.1s;
-    transition: all 0.5s ease 0.1s; }
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8); }
 
 .about {
   padding: 100px 0; }
@@ -441,8 +442,8 @@ body {
       -o-transition: all 0.5s ease 0s;
       transition: all 0.5s ease 0s; }
     .work__btn:active {
-      -webkit-box-shadow: 1px 1px 0px 0px #fff;
-      box-shadow: 1px 1px 0px 0px #fff;
+      -webkit-box-shadow: 0px 0px 1px 0px #fff;
+      box-shadow: 0px 0px 1px 0px #fff;
       -webkit-transition: all 0.5s ease 0s;
       -o-transition: all 0.5s ease 0s;
       transition: all 0.5s ease 0s; }
@@ -494,18 +495,43 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #e9e9e9;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 40em; }
+    height: 571px;
+    position: relative; }
+    .workprocess__video:hover .workprocess__play {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: all 0.3s ease 0.6s;
+      -o-transition: all 0.3s ease 0.6s;
+      transition: all 0.3s ease 0.6s; }
+  .workprocess__image {
+    z-index: -100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .workprocess__play {
+    display: block;
+    background: #43342f;
+    padding: 30px;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s; }
+    .workprocess__play:active {
+      padding: 25px; }
 
 .services {
   padding: 100px 0 38px;
-  background: #f5f5f5; }
+  background: #fff; }
   .services__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -542,7 +568,7 @@ body {
   letter-spacing: 0.08px; }
 
 .testimonials {
-  background: #10c9c3;
+  background: #43342f;
   padding: 178px 0px 60px 0px; }
   .testimonials__body {
     width: 87%;
@@ -602,7 +628,11 @@ body {
     width: 47%; }
   .needproject__form {
     width: 47%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    font-family: "Nunito Sans";
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.07px; }
   .needproject__row1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -614,38 +644,28 @@ body {
     height: 48px;
     margin: 0px 0px 30px 0px;
     padding: 20px;
-    color: #787878;
-    font-family: "Nunito Sans";
-    font-size: 15px;
-    line-height: 24px;
-    font-style: normal;
-    letter-spacing: 0.07px; }
-    .needproject__input_block {
-      display: block;
-      width: 100%; }
+    display: block;
+    width: 100%;
+    color: #43342f; }
     .needproject__input:focus {
-      -webkit-box-shadow: 2px 2px 10px 2px #10c9c3;
-      box-shadow: 2px 2px 10px 2px #10c9c3; }
+      -webkit-box-shadow: 2px 2px 10px 2px #43342f;
+      box-shadow: 2px 2px 10px 2px #43342f; }
+  .needproject__textarea {
+    height: 170px;
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+    padding: 20px;
+    color: #43342f;
+    resize: none; }
   .needproject__btn {
-    color: #fff;
     display: block;
     margin: 0 auto;
-    background: #10c9c3;
-    border: none;
-    -webkit-box-shadow: 2px 2px 4px 2px #10c9c3;
-    box-shadow: 2px 2px 4px 2px #10c9c3; }
-    .needproject__btn:hover {
-      -webkit-box-shadow: 2px 2px 5px 4px #10c9c3;
-      box-shadow: 2px 2px 5px 4px #10c9c3;
-      -webkit-transition: all 0.5s ease 0.1s;
-      -o-transition: all 0.5s ease 0.1s;
-      transition: all 0.5s ease 0.1s; }
+    background: #43342f;
+    border: none; }
     .needproject__btn:active {
-      -webkit-box-shadow: 2px 1px 2px 2px #10c9c3;
-      box-shadow: 2px 1px 2px 2px #10c9c3;
-      -webkit-transition: all 0.5s ease 0.1s;
-      -o-transition: all 0.5s ease 0.1s;
-      transition: all 0.5s ease 0.1s; }
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8); }
 
 .row1__item {
   -webkit-box-flex: 1;

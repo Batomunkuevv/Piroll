@@ -238,7 +238,7 @@
 							</span>
 						</a>
 					</div>
-            <div class="container">       
+            <div class="container">   
                 <a href="#" class="work__btn btn"> load more work </a>
             </div>
 			</div>
@@ -254,7 +254,12 @@
                 </p>
               </div>
               <div class="workprocess__video">
-                <img src="img/workprocess/play.svg" alt="play" />
+					  <div class="workprocess__image ibg">
+					  		<img src="img/workprocess/Cat.jpeg" alt="Cat">
+						</div>
+               	<a href="#" class="workprocess__play">
+						 	<img src="img/workprocess/arrow_1957.png" alt="Play"/>
+						</a>
               </div>
             </div>
           </div>
@@ -428,16 +433,10 @@
                     type="text"
                     name="Title"
                     placeholder="Your Title"
-                    class="needproject__input needproject__input_block"
+                    class="needproject__input"
                     required
                   />
-                  <input
-                    class="needproject__input needproject__input_block"
-                    type="text"
-                    name="Comment"
-                    placeholder="Your Comment"
-                    required
-                  />
+                  <textarea placeholder="Your comment" class="needproject__textarea" name="Comment" id="""></textarea>
                   <button type="submit" class="needproject__btn btn">
                     send message
                   </button>
