@@ -70,7 +70,7 @@ body {
   overflow: hidden; }
 
 .container {
-  max-width: 1201px;
+  max-width: 75.0625rem;
   margin: 0 auto;
   padding: 0 15px; }
 
@@ -89,17 +89,68 @@ body {
   opacity: 0;
   visibility: hidden; }
 
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .menu__item {
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 45px;
+  z-index: 50; }
+  .header__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative; }
+  .header__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .header__logo {
+    margin: 0 auto 0 0;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    z-index: 5; }
+  .header__logo img {
+    max-width: 100%; }
+  @media (max-width: 767px) {
+    .header__menu {
+      position: fixed;
+      overflow: auto;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      width: 100%;
+      top: -100%;
+      left: 0;
+      height: 100%;
+      background: #fff;
+      padding: 100px 0px 0px 0px; } }
+  .header__menu.active {
+    top: 0; }
+  .header__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     color: #140e0e;
     font-size: 20px;
     font-weight: 600;
-    line-height: 24px; }
-  .menu__item a {
-    padding: 0 20px;
+    line-height: 24px;
+    margin: 0 -10px; }
+    @media (max-width: 767px) {
+      .header__list {
+        display: block;
+        margin: 0; } }
+  .header__list li {
+    padding: 0 10px; }
+    @media (max-width: 767px) {
+      .header__list li {
+        padding: 0;
+        margin: 0px 0px 20px 0px; } }
+  .header__link {
+    padding: 10px;
     color: #140e0e;
     font-size: 15px;
     font-weight: 600;
@@ -107,47 +158,59 @@ body {
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s; }
-    .menu__item a:hover {
+    .header__link:hover {
       color: #fff;
       font-size: 18px; }
-
-.header {
-  position: absolute;
-  width: 100%;
-  top: 45px;
-  z-index: 50; }
-  .header__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 0px 0px 150px 0px; }
-  .header__text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    color: #000; }
-  .header__title {
-    font-size: 38px;
-    font-weight: 600;
-    line-height: 48px;
-    letter-spacing: 0.38px;
-    margin: 0px 0px 32px 0px; }
-  .header__subtitle {
-    font-family: "Nunito Sans";
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: 0.09px;
-    margin: 0px 0px 90px 0px; }
+    @media (max-width: 767px) {
+      .header__link {
+        font-size: 32px; } }
+  .header__burger {
+    display: none; }
+    @media (max-width: 767px) {
+      .header__burger {
+        display: block;
+        position: relative;
+        z-index: 3;
+        width: 40px;
+        height: 20px; }
+        .header__burger::before, .header__burger::after {
+          content: "";
+          background: #000;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0;
+          -webkit-transition: all 0.3s ease 0s;
+          -o-transition: all 0.3s ease 0s;
+          transition: all 0.3s ease 0s; }
+        .header__burger::before {
+          top: 0; }
+        .header__burger::after {
+          bottom: 0; }
+        .header__burger span {
+          position: absolute;
+          background: #000;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          top: 9px;
+          -webkit-transition: all 0.3s ease 0s;
+          -o-transition: all 0.3s ease 0s;
+          transition: all 0.3s ease 0s; } }
+    .header__burger.active::before {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 9px; }
+    .header__burger.active::after {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      bottom: 9px; }
+    .header__burger.active span {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0); }
 
 .footer {
   padding: 100px 0 80px;
@@ -214,13 +277,39 @@ body {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 100%;
   flex: 1 0 100%;
-  position: relative; }
+  position: relative;
+  padding: 170px 0px 0px 0px; }
   .fullscreen__bg {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0; }
+    left: 0;
+    z-index: -1; }
+  .fullscreen__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    color: #000; }
+  .fullscreen__title {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0.38px;
+    margin: 0px 0px 32px 0px; }
+  .fullscreen__subtitle {
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.09px;
+    margin: 0px 0px 90px 0px; }
 
 .content {
   -webkit-box-flex: 1;
@@ -648,8 +737,8 @@ body {
     width: 100%;
     color: #43342f; }
     .needproject__input:focus {
-      -webkit-box-shadow: 2px 2px 10px 2px #43342f;
-      box-shadow: 2px 2px 10px 2px #43342f; }
+      -webkit-box-shadow: 0px 0px 10px 2px #43342f;
+      box-shadow: 0px 0px 10px 2px #43342f; }
   .needproject__textarea {
     height: 170px;
     width: 100%;
@@ -657,6 +746,9 @@ body {
     padding: 20px;
     color: #43342f;
     resize: none; }
+    .needproject__textarea:focus {
+      -webkit-box-shadow: 0px 0px 10px 0px #43342f;
+      box-shadow: 0px 0px 10px 0px #43342f; }
   .needproject__btn {
     display: block;
     margin: 0 auto;
