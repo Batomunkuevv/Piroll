@@ -59,10 +59,6 @@
 
 	&__list {
 		display: flex;
-		color: #140e0e;
-		font-size: 20px;
-		font-weight: 600;
-		line-height: 24px;
 		margin: 0 -10px;
 		@media (max-width: 767px) {
 			flex-direction: column;
@@ -86,20 +82,20 @@
 	&__link {
 		padding: 10px;
 		color: #140e0e;
-		font-size: 15px;
+		font-size: 1.125rem;
 		font-weight: 600;
-		line-height: 24px;
+		line-height: 1.33;
 		transition: all 0.5s ease 0s;
 		&:hover {
 			color: #fff;
-			font-size: 18px;
+			font-size: 1.25rem;
 		}
 		@media (max-width: 767px) {
-			font-size: 32px;
+			font-size: 2rem;
 			color: #fff;
 			&:hover {
 				color: #140e0e;
-				font-size: 32px;
+				font-size: 2.125rem;
 			}
 		}
 	}

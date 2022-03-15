@@ -80,6 +80,9 @@ body {
 	max-width: $maxWidthContainer;
 	margin: 0 auto;
 	padding: 0 15px;
+	@media (max-width: 767px) {
+		max-width: none;
+	}
 }
 
 //</Main grid>===============================================================================================
@@ -96,7 +99,7 @@ body {
 
 //<Main block>==============================================================================================
 
-//<Main-screen>==============================================================================================
+//<Fullscreen>==============================================================================================
 
 .page {
 	position: absolute;
@@ -111,7 +114,17 @@ body {
 .fullscreen {
 	flex: 1 0 100%;
 	position: relative;
-	padding: 170px 0px 0px 0px;
+	padding: 170px 0;
+	@media (max-width: 1200px) {
+	}
+	@media (max-width: 992px) {
+	}
+	@media (max-width: 767px) {
+		padding: 150px 0 70px;
+	}
+	@media (max-width: 576px) {
+		padding: 150px 0 100px;
+	}
 	&__bg {
 		position: absolute;
 		width: 100%;
@@ -120,29 +133,47 @@ body {
 		left: 0;
 		z-index: -1;
 	}
-	&__text {
+	&__content {
 		display: flex;
 		flex-direction: column;
-		width: 50%;
 		color: #000;
 	}
 
 	&__title {
-		font-size: 38px;
+		font-size: 2.375rem;
 		font-weight: 600;
-		line-height: 48px;
-		letter-spacing: 0.38px;
+		line-height: 1.18;
+		letter-spacing: 0, 02631em;
 		margin: 0px 0px 32px 0px;
+		@media (max-width: 576px) {
+			font-size: 1.875rem;
+		}
+		@media (max-width: 430px) {
+			font-size: 1.625rem;
+		}
 	}
 
 	&__subtitle {
 		font-family: "Nunito Sans";
-		font-size: 18px;
+		width: 50%;
+		font-size: 1.5rem;
 		color: rgba(0, 0, 0, 0.8);
-		font-weight: 600;
-		line-height: 28px;
-		letter-spacing: 0.09px;
+		font-weight: 500;
+		line-height: 1.56;
+		letter-spacing: 0.005em;
 		margin: 0px 0px 90px 0px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 60px 0px;
+		}
+		@media (max-width: 576px) {
+			margin: 0px 0px 60px 0px;
+			font-size: 1.125rem;
+			width: 80%;
+		}
+		@media (max-width: 430px) {
+			width: 100%;
+			margin: 0px 0px 30px 0px;
+		}
 	}
 }
 
@@ -169,14 +200,30 @@ body {
 	&:active {
 		transform: scale(0.8);
 	}
+	@media (max-width: 767px) {
+		width: 150px;
+	}
+	@media (max-width: 576px) {
+	}
+	@media (max-width: 430px) {
+	}
 }
 
-//<Main-screen>==============================================================================================
+//<Fullscreen>==============================================================================================
 
 //<About>====================================================================================================
 
 .about {
 	padding: 100px 0;
+	@media (max-width: 1200px) {
+		padding: 80px 0;
+	}
+	@media (max-width: 767px) {
+		padding: 60px 0;
+	}
+	@media (max-width: 576px) {
+		padding: 40px 0;
+	}
 	&__title {
 		margin: 0px 0px 41px 0px;
 	}
@@ -193,11 +240,14 @@ body {
 
 .title {
 	color: #171717;
-	font-size: 30px;
+	font-size: 1.875rem;
 	font-weight: 600;
 	line-height: 60px;
 	text-align: center;
 	letter-spacing: 0.3px;
+	@media (max-width: 430px) {
+		font-size: 1.625rem;
+	}
 }
 
 .subtitle {
@@ -208,6 +258,9 @@ body {
 	line-height: 24px;
 	letter-spacing: 0.08px;
 	text-align: center;
+	@media (max-width: 767px) {
+		width: 100%;
+	}
 }
 
 //</About>====================================================================================================
@@ -225,6 +278,18 @@ body {
 	}
 	&__content {
 		padding: 150px 100px;
+		@media (max-width: 1200px) {
+			padding: 100px 80px;
+		}
+		@media (max-width: 767px) {
+			padding: 60px 60px;
+		}
+		@media (max-width: 576px) {
+			padding: 40px 20px;
+		}
+		@media (max-width: 430px) {
+			padding: 10px 5px;
+		}
 	}
 
 	&__item {
@@ -238,6 +303,15 @@ body {
 	&__title {
 		margin: 0px 0px 39px 0px;
 		text-align: left;
+		@media (max-width: 767px) {
+			font-size: 1.5rem;
+		}
+		@media (max-width: 576px) {
+			font-size: 1.25rem;
+		}
+		@media (max-width: 430px) {
+			font-size: 1rem;
+		}
 	}
 	&__bg {
 		z-index: -100;
@@ -254,6 +328,12 @@ body {
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		color: #000000;
+		@media (max-width: 767px) {
+			font-size: 0.75rem;
+		}
+		@media (max-width: 430px) {
+			font-size: 0.6rem;
+		}
 	}
 
 	&__loading {
@@ -261,11 +341,6 @@ body {
 		height: 7px;
 		margin: 0px 0px 41px 0px;
 	}
-
-	&__loading:last-child {
-		margin: 0px;
-	}
-
 	&__ui {
 		width: 75%;
 		background: #43342f;
