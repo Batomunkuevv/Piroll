@@ -534,26 +534,57 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: 0 -15px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    justify-content: center; }
+    @media (max-width: 767px) {
+      .numbers__row {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0 auto; } }
+  .numbers__item {
+    padding: 0 15px; }
+  @media (max-width: 1200px) {
+    .numbers {
+      padding: 80px 0; } }
+  @media (max-width: 767px) {
+    .numbers {
+      padding: 60px 0; } }
+  @media (max-width: 576px) {
+    .numbers {
+      padding: 30px 0; } }
 
 .itemn {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  display: flex; }
+  @media (max-width: 767px) {
+    .itemn {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin: 0 0 15px 0;
+      padding: 0; }
+      .itemn:nth-child(3) {
+        margin-left: -5px; }
+      .itemn:nth-child(4) {
+        margin-left: -10px; } }
+  @media (max-width: 576px) {
+    .itemn {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
+      margin-bottom: 30px; }
+      .itemn:nth-child(3) {
+        margin-left: -5px; }
+      .itemn:nth-child(2) {
+        margin-left: -35px; }
+      .itemn:nth-child(4) {
+        margin-left: -40px; } }
   .itemn__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -563,17 +594,21 @@ body {
     -ms-flex-direction: column;
     flex-direction: column; }
   .itemn__image {
-    margin: 0px 28px 0px 0px; }
+    margin: 0px 28px 0px 0px;
+    max-width: 100%;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center; }
   .itemn__number {
     color: #fff;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     margin: 0px 0px 10px 0px;
     text-transform: uppercase;
     letter-spacing: 0.54px; }
   .itemn__text {
     color: #fff;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
     line-height: 30px;
     text-transform: uppercase;
