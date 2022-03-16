@@ -907,27 +907,20 @@ body {
 
 .testimonials {
   background: #43342f;
-  padding: 178px 0px 60px 0px; }
+  padding: 178px 0px; }
   @media (max-width: 1200px) {
     .testimonials {
-      padding: 150px 0px 60px 0px; } }
+      padding: 150px 0; } }
   @media (max-width: 767px) {
     .testimonials {
-      padding: 100px 0px 60px 0px; } }
+      padding: 100px 0px; } }
   @media (max-width: 576px) {
     .testimonials {
       padding: 70px 0px 40px 0px; } }
   .testimonials__body {
     margin: 0 auto; }
   .testimonials__quote {
-    text-align: center;
-    margin: 0px 0px 105px 0px; }
-    @media (max-width: 767px) {
-      .testimonials__quote {
-        margin: 0px 0px 75px 0px; } }
-    @media (max-width: 576px) {
-      .testimonials__quote {
-        margin: 0px 0px 55px 0px; } }
+    text-align: center; }
   .testimonials__quote p {
     color: #ffffff;
     font-family: Montserrat;
@@ -956,19 +949,6 @@ body {
     @media (max-width: 767px) {
       .testimonials__quote cite {
         font-size: 0.725rem; } }
-  .testimonials__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 0 -3px; }
-  .testimonials__ball {
-    padding: 0 3px; }
 
 .clients {
   padding: 64px 0; }

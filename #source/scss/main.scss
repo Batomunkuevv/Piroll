@@ -704,12 +704,12 @@ body {
 
 .testimonials {
 	background: #43342f;
-	padding: 178px 0px 60px 0px;
+	padding: 178px 0px;
 	@media (max-width: 1200px) {
-		padding: 150px 0px 60px 0px;
+		padding: 150px 0;
 	}
 	@media (max-width: 767px) {
-		padding: 100px 0px 60px 0px;
+		padding: 100px 0px;
 	}
 	@media (max-width: 576px) {
 		padding: 70px 0px 40px 0px;
@@ -720,13 +720,6 @@ body {
 
 	&__quote {
 		text-align: center;
-		margin: 0px 0px 105px 0px;
-		@media (max-width: 767px) {
-			margin: 0px 0px 75px 0px;
-		}
-		@media (max-width: 576px) {
-			margin: 0px 0px 55px 0px;
-		}
 	}
 	&__quote p {
 		color: #ffffff;
@@ -758,19 +751,6 @@ body {
 		@media (max-width: 767px) {
 			font-size: 0.725rem;
 		}
-	}
-	&__dotted {
-	}
-
-	&__row {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 0 -3px;
-	}
-
-	&__ball {
-		padding: 0 3px;
 	}
 }
 
