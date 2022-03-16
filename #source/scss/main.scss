@@ -639,6 +639,13 @@ body {
 .services {
 	padding: 100px 0 38px;
 	background: #fff;
+	@media (max-width: 1200px) {
+		padding: 90px 0 18px;
+	}
+	@media (max-width: 767px) {
+		padding: 60px 0 5px;
+	}
+
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
@@ -650,30 +657,43 @@ body {
 		padding: 0 35px;
 		text-align: center;
 		margin: 0px 0px 62px 0px;
+		@media (max-width: 1200px) {
+		}
+		@media (max-width: 767px) {
+			flex: 1 1 50%;
+		}
+		@media (max-width: 430px) {
+			flex: 1 1 100%;
+		}
 	}
 }
 
 .items {
 	&__image {
 		margin: 0px 0px 15px 0px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 13px 0px;
+		}
 	}
-
 	&__title {
 		margin: 0px 0px 5px 0px;
 		color: #191919;
-		font-size: 12px;
+		font-size: 0.85rem;
 		font-weight: 600;
-		line-height: 30px;
+		line-height: 2.5;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 0px 0px;
+		}
 	}
 
 	&__text {
 		color: #787878;
 		font-family: "Nunito Sans";
-		font-size: 16px;
+		font-size: 1.125rem;
 		font-weight: 400;
-		line-height: 24px;
+		line-height: 1.825;
 		letter-spacing: 0.08px;
 	}
 }
@@ -685,34 +705,59 @@ body {
 .testimonials {
 	background: #43342f;
 	padding: 178px 0px 60px 0px;
+	@media (max-width: 1200px) {
+		padding: 150px 0px 60px 0px;
+	}
+	@media (max-width: 767px) {
+		padding: 100px 0px 60px 0px;
+	}
+	@media (max-width: 576px) {
+		padding: 70px 0px 40px 0px;
+	}
 	&__body {
-		width: 87%;
 		margin: 0 auto;
 	}
 
 	&__quote {
 		text-align: center;
 		margin: 0px 0px 105px 0px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 75px 0px;
+		}
+		@media (max-width: 576px) {
+			margin: 0px 0px 55px 0px;
+		}
 	}
 	&__quote p {
 		color: #ffffff;
 		font-family: Montserrat;
-		font-size: 24px;
+		font-size: 2rem;
 		font-weight: 500;
-		line-height: 36px;
-		font-size: 30px;
+		line-height: 1.25;
 		letter-spacing: 0.3px;
 		margin: 0px 0px 10px 0px;
+		@media (max-width: 767px) {
+			font-size: 1.5rem;
+		}
+		@media (max-width: 576px) {
+			font-size: 1.2rem;
+		}
+		@media (max-width: 430px) {
+			font-size: 1rem;
+		}
 	}
 
 	&__quote cite {
 		color: #ffffff;
 		font-family: Montserrat;
-		font-size: 12px;
+		font-size: 0.85rem;
 		font-weight: 500;
-		line-height: 36px;
+		line-height: 3;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
+		@media (max-width: 767px) {
+			font-size: 0.725rem;
+		}
 	}
 	&__dotted {
 	}
@@ -735,12 +780,54 @@ body {
 
 .clients {
 	padding: 64px 0;
+	@media (max-width: 767px) {
+		padding: 74px 0 0px;
+	}
+	@media (max-width: 576px) {
+		padding: 44px 0 0px;
+	}
 	&__row {
 		display: flex;
-		width: 100%;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		@media (max-width: 767px) {
+		}
 	}
 	&__image {
+		display: flex;
+		@media (max-width: 767px) {
+			justify-content: center;
+			align-items: center;
+			flex: 1 1 50%;
+			margin: 0px 0px 30px 0px;
+			&:last-child {
+				transform: translate(0, -300%);
+				margin: 0;
+			}
+			&:nth-child(3) {
+				transform: translate(23%, 0);
+			}
+			&:nth-child(4) {
+				transform: translate(-23%, 0);
+			}
+		}
+		@media (max-width: 576px) {
+			flex: 1 1 100%;
+			&:last-child {
+				transform: translate(0, 0);
+				margin: 0 0 50px 0;
+			}
+			&:nth-child(3) {
+				transform: translate(0, 0);
+			}
+			&:nth-child(4) {
+				transform: translate(0, 0);
+			}
+		}
+	}
+	&__image img {
+		max-width: 100%;
 	}
 }
 
@@ -751,24 +838,53 @@ body {
 .needproject {
 	background: #f5f5f5;
 	padding: 100px 0;
+	@media (max-width: 1200px) {
+		padding: 80px 0;
+	}
+	@media (max-width: 767px) {
+		padding: 60px 0;
+	}
+	@media (max-width: 576px) {
+		padding: 40px 0;
+	}
+	@media (max-width: 430px) {
+		padding: 30px 0;
+	}
 	&__title {
 		margin: 0px 0px 30px 0px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: 576px) {
+			margin: 0px 0px 15px 0px;
+		}
 	}
 
 	&__subtitle {
 		margin: 0 auto 35px;
 		width: 47%;
+		@media (max-width: 576px) {
+			width: 80%;
+		}
+		@media (max-width: 430px) {
+			width: 100%;
+		}
 	}
 
 	&__form {
 		width: 47%;
 		margin: 0 auto;
 		font-family: "Nunito Sans";
-		font-size: 15px;
-		line-height: 24px;
+		font-size: 0.9375rem;
+		line-height: 1.5;
 		letter-spacing: 0.07px;
+		@media (max-width: 576px) {
+			width: 80%;
+		}
+		@media (max-width: 430px) {
+			width: 100%;
+		}
 	}
-
 	&__row1 {
 		display: flex;
 		margin: 0 -15px;
@@ -803,8 +919,31 @@ body {
 		margin: 0 auto;
 		background: #43342f;
 		border: none;
+		line-height: 50px;
+		width: 180px;
+		text-align: center;
+		border-radius: 15px;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+		font-size: 13px;
+		border: 2px solid #fff;
+		box-shadow: 0px 0px 5px 0px #fff;
+		transition: all 0.5s ease-in 0s;
 		&:active {
 			transform: scale(0.8);
+		}
+		@media (max-width: 767px) {
+			line-height: 4;
+			width: 150px;
+		}
+		@media (max-width: 576px) {
+			font-size: 0.85rem;
+		}
+		@media (max-width: 430px) {
+			line-height: 3.5;
+			width: 140px;
+			font-size: 0.75rem;
 		}
 	}
 }
