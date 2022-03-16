@@ -388,7 +388,8 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #000; }
+    color: #000;
+    padding: 0 0 15px; }
   .fullscreen__title {
     font-size: 2.375rem;
     font-weight: 600;
@@ -706,11 +707,13 @@ body {
         -ms-flex: 1 1 100%;
         flex: 1 1 100%; } }
   .work__btn {
+    margin: 0 auto; }
+  .work__btn a {
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     display: block;
-    margin: 40px auto 0;
+    margin: 40px 0 0;
     font-size: 0.75rem;
     line-height: 4.16;
     font-weight: 500;
@@ -720,31 +723,32 @@ body {
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s; }
-    .work__btn:hover {
+    .work__btn a:hover {
       line-height: 4.16;
       -webkit-box-shadow: 1px 1px 5px 3px #fff;
       box-shadow: 1px 1px 5px 3px #fff;
       -webkit-transition: all 0.5s ease 0s;
       -o-transition: all 0.5s ease 0s;
       transition: all 0.5s ease 0s; }
-    .work__btn:active {
+    .work__btn a:active {
       -webkit-box-shadow: 0px 0px 1px 0px #fff;
       box-shadow: 0px 0px 1px 0px #fff;
       -webkit-transition: all 0.5s ease 0s;
       -o-transition: all 0.5s ease 0s;
       transition: all 0.5s ease 0s; }
     @media (max-width: 1200px) {
-      .work__btn {
+      .work__btn a {
         margin: 30px 0px 0px 0px; } }
     @media (max-width: 767px) {
-      .work__btn {
+      .work__btn a {
         font-size: 0.7rem; }
-        .work__btn:hover {
-          line-height: 3.5; } }
+        .work__btn a:hover {
+          line-height: 3.5;
+          border-radius: 8px; } }
     @media (max-width: 767px) {
-      .work__btn {
+      .work__btn a {
         margin: 20px 0px 0px 0px; }
-        .work__btn:hover {
+        .work__btn a:hover {
           line-height: 3; } }
 
 .item {
@@ -971,6 +975,7 @@ body {
     .clients {
       padding: 44px 0 0px; } }
   .clients__row {
+    padding: 0 0 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
