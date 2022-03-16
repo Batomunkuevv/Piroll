@@ -80,6 +80,7 @@ body {
 	max-width: $maxWidthContainer;
 	margin: 0 auto;
 	padding: 0 15px;
+	overflow: hidden;
 	@media (max-width: 767px) {
 		max-width: none;
 	}
@@ -115,8 +116,6 @@ body {
 	flex: 1 0 100%;
 	position: relative;
 	padding: 170px 0;
-	@media (max-width: 1200px) {
-	}
 	@media (max-width: 992px) {
 	}
 	@media (max-width: 767px) {
