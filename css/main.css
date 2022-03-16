@@ -70,17 +70,13 @@ body {
     overflow: hidden; } }
 
 .wrapper {
-  min-height: 100vh;
-  overflow: hidden; }
+  min-height: 100vh; }
 
 .container {
   max-width: 75.0625rem;
   margin: 0 auto;
   padding: 0 15px;
   overflow: hidden; }
-  @media (max-width: 767px) {
-    .container {
-      max-width: none; } }
 
 .ibg {
   background-position: center;
