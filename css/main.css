@@ -245,6 +245,15 @@ body {
 .footer {
   padding: 100px 0 80px;
   background: #43342f; }
+  @media (max-width: 1200px) {
+    .footer {
+      padding: 80px 0 60px; } }
+  @media (max-width: 767px) {
+    .footer {
+      padding: 60px 0 40px; } }
+  @media (max-width: 576px) {
+    .footer {
+      padding: 40px 0 20px; } }
   .footer__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -252,26 +261,60 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+    @media (max-width: 430px) {
+      .footer__row {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+  .footer__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -15px; }
+    @media (max-width: 767px) {
+      .footer__body {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0; } }
   .footer__company {
-    font-size: 18px;
+    font-size: 1.3rem;
     font-weight: 500;
     letter-spacing: 0.18px;
     margin: 0px 0px 27px 0px; }
+    @media (max-width: 767px) {
+      .footer__company {
+        font-size: 1.25rem; } }
+    @media (max-width: 576px) {
+      .footer__company {
+        font-size: 1.125rem; } }
   .footer__credits {
     font-family: "Nunito Sans";
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.07px; }
+    @media (max-width: 767px) {
+      .footer__credits {
+        margin: 0px 0px 20px 0px; } }
   .footer__link {
     display: block;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.3rem;
     letter-spacing: 0.07px;
     margin: 0px 0px 5px 0px;
     padding: 5px; }
     .footer__link:hover {
       text-decoration: underline; }
+    @media (max-width: 767px) {
+      .footer__link {
+        font-size: 1.25rem; } }
+    @media (max-width: 576px) {
+      .footer__link {
+        font-size: 1.125rem; } }
+    @media (max-width: 430px) {
+      .footer__link {
+        font-size: 1rem; } }
 
 .itemfooter {
   font-family: "Nunito Sans";
@@ -284,10 +327,23 @@ body {
   flex-direction: column;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  font-size: 1.25rem;
   letter-spacing: 0.07px; }
   .itemfooter__email {
     margin: 0px 0px 10px 0px; }
+  .itemfooter_flex {
+    padding: 15px; }
+  @media (max-width: 767px) {
+    .itemfooter {
+      font-size: 1.125rem; }
+      .itemfooter_flex {
+        padding: 0px; } }
+  @media (max-width: 576px) {
+    .itemfooter {
+      font-size: 1rem; } }
+  @media (max-width: 576px) {
+    .itemfooter {
+      margin: 0px 0px 15px 0px; } }
 
 .page {
   position: absolute;
