@@ -292,9 +292,14 @@ body {
 		}
 	}
 
+	&__items {
+		flex: 0 1 50%;
+	}
+
 	&__item {
 		flex: 0 1 50%;
 	}
+
 	&__row {
 		display: flex;
 		flex-direction: column;
@@ -320,7 +325,7 @@ body {
 	}
 }
 
-.item {
+.itemss {
 	&__text {
 		font-size: 12px;
 		line-height: 30px;
@@ -454,20 +459,24 @@ body {
 
 .work {
 	background: #43342f;
-	padding: 0px 0px 30px 0px;
+	padding: 0px 0px 40px 0px;
+	@media (max-width: 1200px) {
+		padding: 0px 0px 30px 0px;
+	}
+	@media (max-width: 576px) {
+		padding: 0px 0px 20px 0px;
+	}
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
-		width: 100%;
-		@media (max-width: 1100px) {
-			flex-direction: column;
-		}
 	}
-
 	&__column {
-		flex: 0 1 25%;
-		@media (max-width: 1100) {
-			flex: 0 1 50%;
+		flex: 1 1 25%;
+		@media (max-width: 767px) {
+			flex: 1 1 50%;
+		}
+		@media (max-width: 576px) {
+			flex: 1 1 100%;
 		}
 	}
 
@@ -481,16 +490,16 @@ body {
 		border: none;
 		box-shadow: none;
 		display: block;
-		margin: 30px auto 0;
-		font-size: 12px;
-		line-height: 50px;
+		margin: 40px auto 0;
+		font-size: 0.75rem;
+		line-height: 4.16;
 		font-weight: 500;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		color: #fff;
 		transition: all 0.5s ease 0s;
 		&:hover {
-			line-height: 50px;
+			line-height: 4.16;
 			box-shadow: 1px 1px 5px 3px #fff;
 			transition: all 0.5s ease 0s;
 		}
@@ -498,12 +507,27 @@ body {
 			box-shadow: 0px 0px 1px 0px #fff;
 			transition: all 0.5s ease 0s;
 		}
+		@media (max-width: 1200px) {
+			margin: 30px 0px 0px 0px;
+		}
+		@media (max-width: 767px) {
+			&:hover {
+				line-height: 3.5;
+			}
+			font-size: 0.7rem;
+		}
+		@media (max-width: 767px) {
+			margin: 20px 0px 0px 0px;
+			&:hover {
+				line-height: 3;
+			}
+		}
 	}
 }
 
 .item {
 	position: relative;
-	height: 300px;
+	padding-top: 100%;
 	display: block;
 	&__eyes {
 		position: absolute;
@@ -541,13 +565,31 @@ body {
 //<Workprocess>===================================================================================================
 
 .workprocess {
-	padding: 100px 0;
+	padding: 100px 0 20px 0;
+	@media (max-width: 1200px) {
+		padding: 60px 0 20px 0;
+	}
+	@media (max-width: 767px) {
+		padding: 40px 0 20px 0;
+	}
+	@media (max-width: 576px) {
+		padding: 30px 0 10px 0;
+	}
 	&__title {
 		margin: 0px 0px 41px 0px;
+		@media (max-width: 1200px) {
+			margin: 0px 0px 30px 0px;
+		}
+		@media (max-width: 767px) {
+			margin: 0px 0px 15px 0px;
+		}
+		@media (max-width: 576px) {
+			margin: 0px 0px 5px 0px;
+		}
 	}
 
 	&__subtitle {
-		width: 45%;
+		text-align: center;
 		margin: 0 auto 57px;
 	}
 
@@ -555,7 +597,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 571px;
+		padding-top: 50%;
 		position: relative;
 		&:hover {
 			.workprocess__play {
@@ -578,6 +620,7 @@ body {
 	&__play {
 		display: block;
 		background: #43342f;
+		margin-top: -50%;
 		padding: 30px;
 		border-radius: 50%;
 		opacity: 0;
