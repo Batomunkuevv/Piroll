@@ -173,6 +173,7 @@ body {
         .header__list li:last-child {
           margin: 0; } }
   .header__link {
+    /*display: inline-block;*/
     padding: 10px;
     color: #140e0e;
     font-size: 1.125rem;
@@ -183,6 +184,7 @@ body {
     transition: all 0.5s ease 0s; }
     .header__link:hover {
       color: #fff;
+      /*transform: scale(1.125);*/
       font-size: 1.25rem; }
     @media (max-width: 767px) {
       .header__link {
@@ -190,6 +192,8 @@ body {
         color: #fff; }
         .header__link:hover {
           color: #140e0e;
+          /* тут лучше использовать transform: scale(1.125); -- соседние ссылки не будут двигаться */
+          /* но ссылка должна быть display: inline-block; */
           font-size: 2.125rem; } }
   .header__burger {
     display: none; }
@@ -366,6 +370,9 @@ body {
   -ms-flex: 1 0 100%;
   flex: 1 0 100%;
   position: relative;
+  /* так проще */
+  background: url("/img/Header/BG.jpg");
+  background-size: cover;
   padding: 170px 0; }
   @media (max-width: 767px) {
     .fullscreen {
